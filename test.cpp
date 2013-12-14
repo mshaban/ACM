@@ -1,12 +1,13 @@
 #include <stdio.h>
-#include "iostream"
+#include <iostream>
+#include <string>
 using namespace std;
-int main (int argc, char const *argv[])
-{	
-	freopen ("input.txt", "r", stdin);
+
+int main(int argc, char const *argv[])
+{
+	string s = "12345";
 	int  x;
-	scanf("%d", &x);
+	sscanf(s.c_str(), "%d", &x);
 	printf("%d\n", x);
-	printf("Hello, World\n");
 	return 0;
 }
