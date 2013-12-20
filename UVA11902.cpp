@@ -26,7 +26,7 @@ int main(int argc, char const *argv[])
 {
     freopen("in.txt", "r", stdin);
     scanf("%d", &t);
-    for (int c = 0; c < t; ++c)
+    for (int c = 1; c <= t; ++c)
     {
         scanf("%d", &n);
         v.clear();
@@ -44,20 +44,20 @@ int main(int argc, char const *argv[])
             vis.assign(n, unvis);
             dfs(i, 0);
         }
-        printf("Case %d:\n", c + 1);
+        printf("Case %d:\n", c);
         sep = "";
         for (int i = 0 ; i < n; ++i)
         {
             if (i == 0)
-                sep += "+";
-            sep += "--";
+                sep = "+-";
             if (i == n - 1)
                 sep += "+";
+            else
+                sep += "--";
         }
         cout << sep << endl;
         for (int i = 0; i < n; ++i)
         {
-
             for (int j = 0; j < n; ++j)
             {
                 if (j == 0)
