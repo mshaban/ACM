@@ -5,9 +5,10 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
-	string s = "12345";
-	int  x;
-	sscanf(s.c_str(), "%d", &x);
-	printf("%d\n", x);
+	long long x = 1000000000;
+	freopen("in.txt", "w", stdout);
+	for(int i = 0;i<x;++i){
+		printf("%d\n", i);
+	}
 	return 0;
 }
